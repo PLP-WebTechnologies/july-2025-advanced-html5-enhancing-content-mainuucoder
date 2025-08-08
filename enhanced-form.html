@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Form</title>
+</head>
+<body>
+
+    <header>
+        <h1>CONFERENCE REGISTRATION</h1>
+        <p>Please fill out the form below to register for our upcoming event.</p>
+    </header>
+    <main>
+        <!-- Informational Content -->
+        <section>
+            <h2>Event Highlights</h2>
+            <ul type="square">
+                <li>Keynote speeches from industry leaders</li>
+                <li>Hands-on workshops</li>
+                <li>Networking opportunities</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Event Schedule Overview</h2>
+            <table border="5">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Activity</th>
+                        <th>Speaker</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00 AM</td>
+                        <td>Opening Remarks</td>
+                        <td>Dr. Smith</td>
+                        <td>well</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 AM</td>
+                        <td>Keynote: The Future of Tech</td>
+                        <td>Jane Doe</td>
+                        <td>pending</td>
+                    </tr>
+                    <tr>
+                        <td>11:30 AM</td>
+                        <td>Workshop: AI in Action</td>
+                        <td>John Roe</td>
+                        <td>closed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Venue Preview</h2>
+            <!-- <figure> -->
+                <img src="conference image.jpeg" alt="Conference Venue" width="500" height="200">
+                <figcaption>Main Hall - where keynote speeches will be held</figcaption>
+            <!-- </figure> -->
+            <audio controls >
+                <source src="conference audio.mp3" type="audio/mpeg" width="300" height="50"S>
+                Your browser does not support the audio element.
+            </audio>
+            <h1></h1>
+            <video controls autoplay loop width="640" height="360" >
+                <source src="conference video2.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section> 
+        <!-- Registration Form -->
+        <section>
+            <h2>Registration Form</h2>
+            <form action="/submit" method="post" autocomplete="on">
+                
+                <fieldset>
+                 <strong><legend>Personal Information</legend></strong>
+
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Daniel Mutahi" required><br><br>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="example@example.com" required><br><br>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+254 7123 45678" required><br><br>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required><br><br>
+                </fieldset>
+
+                <fieldset>
+                  <strong>   <legend>Event Preferences</legend></strong>
+
+                    <label for="attendance-type">Attendance Type:</label>
+                    <select id="attendance-type" name="attendance-type" required>
+                        <option value="">-- Select an option --</option>
+                        <option value="physical">Physical</option>
+                        <option value="virtual">Virtual</option>
+                    </select><br><br>
+                    <label for="workshop">Choose Workshop:</label>
+                    <select id="workshop" name="workshop" required>
+                        <option value="">-- Select Workshop --</option>
+                        <option value="ai">AI in Action</option>
+                        <option value="cloud">Cloud Innovations</option>
+                        <option value="security">Cybersecurity Trends</option>
+                        <option value="data analyst">Data anlyst Trends</option>
+                    </select><br><br>
+                    <strong><p>Meal Preference:</p> </strong>
+                    <input type="radio" id="veg" name="meal" value="Vegetarian" required>
+                    <label for="veg">Vegetarian</label>
+                    <input type="radio" id="nonveg" name="meal" value="Non-Vegetarian">
+                    <label for="nonveg">Non-Vegetarian</label><br><br>
+                    <strong><label for="requests">Special Requests:</label><br> </strong>
+                    <textarea id="requests" name="requests" rows="4" cols="50" placeholder="Any dietary restrictions or accessibility needs..."></textarea><br><br>
+                </fieldset>
+
+                <fieldset>
+                   <strong> <legend>Payment Information</legend></strong>
+
+                    <label for="cardname">Cardholder Name:</label>
+                    <input type="text" id="cardname" name="cardname" placeholder="Name on Card" required><br><br>
+
+                    <label for="cardnumber">Card Number:</label>
+                    <input type="text" id="cardnumber" name="cardnumber" pattern="\d{10}" placeholder="1234567812" required><br><br>
+
+                    <label for="expdate">Expiration Date:</label>
+                    <input type="month" id="expdate" name="expdate" required><br><br>
+
+                    <label for="cvv">M-pesa code</label>
+                    <input type="text" id="M-pesa" name="cvv" pattern="[A-Z-0-9]{10}" placeholder="QRFTCSH5F" required><br><br>
+
+                    <label for="total">Amount Due:</label>
+                    <input type="text" id="total" name="total" value="$150.00" readonly>
+                </fieldset>
+
+                <br>
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions</label><br><br>
+
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Reset Form</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Conference Inc. @-MAINUU</p>
+    </footer>
+
+</body>
+</html>
